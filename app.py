@@ -1,7 +1,10 @@
 import os
 from pathlib import Path
 from dotenv import load_dotenv
+from flask import Flask
+from waitress import serve
 
+app = Flask(__name__)
 load_dotenv(
     dotenv_path=Path(__file__).resolve().parent / ".env",
     override=True
